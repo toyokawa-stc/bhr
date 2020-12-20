@@ -1,0 +1,537 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+:root {
+  --main-color: #cb0012;
+  --accent-color: #000000;
+  --base-color: #ffffff;
+}
+
+
+/*======================================
+
+  ------------------------------------
+    カラー
+  ------------------------------------
+
+    Main       : #cb0012
+    Accent     : #000000
+    Base       : #ffffff
+
+  ------------------------------------
+    フォント
+  ------------------------------------
+
+    "Noto Serif JP", serif, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+
+  ------------------------------------
+    構造
+  ------------------------------------
+
+    0. 基本
+    1. ヘッダー
+    2. メイン
+    3. フッター
+    4. 各ページ
+      4-1. ホーム
+      4-2. メニュー
+      4-3. 秘伝の味
+      4-4. 店舗案内
+      4-5. 取り組み
+      4-6. お問い合わせ
+      4-7. サイトマップ
+      4-8. プライバシーポリシー
+
+  ------------------------------------
+    ログ
+  ------------------------------------
+
+    2020/12/03 : トップページのコーディング完了 (スライドショー以外)
+    2020/12/04 : スライドショー設置完了
+
+======================================*/
+
+
+
+
+/*======================================
+
+  0. 基本
+
+======================================*/
+
+body {
+  font-family: "Noto Serif JP", serif, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+  background-color: var(--base-color);
+  color: var(--accent-color);
+  font-size: 18px;
+}
+p {
+  line-height: 1.75;
+}
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+a:hover {
+  color: var(--main-color);
+}
+
+
+
+
+/*======================================
+
+  1. ヘッダー
+
+======================================*/
+
+header {
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+}
+header h1 {
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+header nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+header ul {
+  overflow: hidden;
+}
+header li {
+  float: left;
+}
+header li a {
+  display: block;
+  width: 130px;
+  height: 100px;
+  line-height: 100px;
+  margin-right: 20px;
+  text-align: center;
+}
+header li:last-child a {
+  margin-right: 0;
+}
+
+
+
+
+/*======================================
+
+  2. メイン
+
+======================================*/
+
+body:not(.home) main .main-visual {
+  margin-bottom: 120px;
+  background-image: url("../images/bg-wood.jpg");
+  background-repeat: repeat-x;
+  text-align: center;
+}
+main article {
+  width: 1200px;
+  margin: 0 auto;
+}
+main article section {
+  overflow: hidden;
+  padding-bottom: 90px;
+  border-bottom: 1px solid #ccc;
+}
+main article section h2 {
+  float: left;
+  width: 200px;
+  text-align: center;
+}
+main article section h3 {
+  width: 1000px;
+  margin: 0 0 20px auto;
+  padding: 4px 10px 6px;
+  border-left: 6px var(--main-color) solid;
+  font-size: 24px;
+  font-weight: normal;
+}
+main article section ul {
+  width: 1000px;
+  margin: 0 0 0 auto;
+}
+main article section li {
+  margin-left: 40px;
+  padding: 6px 0;
+}
+main article section p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+main article .note {
+  margin-bottom: 120px;
+  padding-top: 120px;
+}
+main article .note p {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+
+
+
+/*======================================
+
+  3. フッター
+
+======================================*/
+
+footer {
+  background-image: url("../images/bg-black.jpg");
+}
+footer .inner {
+  overflow: hidden;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+footer section {
+  float: left;
+  width: 600px;
+}
+footer h1 {
+  margin-bottom: 20px;
+}
+footer address {
+  color: var(--base-color);
+  font-style: normal;
+}
+footer address span {
+  font-size: 30px;
+}
+footer ul {
+  overflow: hidden;
+  padding-left: 40px;
+}
+footer li {
+  float: left;
+}
+footer ul a {
+  display: block;
+  width: 280px;
+  margin-bottom: 20px;
+  color: var(--base-color);
+  font-size: 24px;
+}
+footer ul i {
+  padding-right: 10px;
+}
+footer > p {
+  padding: 4px 0 5px;
+  background-color: rgba(203, 0, 18, .2);
+  color: var(--base-color);
+  text-align: center;
+}
+
+
+
+
+/*======================================
+
+  4. 各ページ
+
+======================================*/
+
+/*
+  4-1. ホーム
+======================================*/
+
+.home main .main-visual {
+  margin-bottom: 60px;
+}
+.home main .main-visual .slider {
+  margin: 0 0 50px;
+}
+.home main .main-visual .slider img {
+  width: 100%;
+  height: auto;
+  padding: 0 10px;
+}
+.home main .main-visual .slider .slick-next {
+  right: 20px;
+  z-index: 99;
+}
+.home main .main-visual .slider .slick-prev {
+  left: 15px;
+  z-index: 100;
+}
+.home main .main-visual .slider .slick-prev:before,
+.home main .main-visual .slider .slick-next:before {
+  font-size: 80px; /* 初期値:20px */
+}
+.home main .main-visual .slider .slick-prev,
+.home main .main-visual .slider .slick-next {
+  width: 80px; /* 初期値:20px */
+  height: 80px; /* 初期値:20px */
+}
+.home main .menu-home {
+  margin-bottom: 120px;
+  background-image: url("../images/bg-red.jpg");
+  background-repeat: repeat-x;
+}
+.home main .menu-home .inner {
+  overflow: hidden;
+  width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 120px;
+  border-bottom: 1px solid #cccccc;
+}
+.home main .menu-home section {
+  float: left;
+  width: 294px;
+  margin-right: 8px;
+}
+.home main .menu-home section:last-child {
+  margin-right: 0;
+}
+.home main .menu-home section div {
+  height: 630px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.home main .menu-home section div figure:nth-child(2) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.home main .menu-home h2 {
+  padding: 60px 0;
+  color: var(--base-color);
+  font-size: 36px;
+  font-weight: normal;
+}
+.home main .menu-home h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: normal;
+}
+.home main .menu-home p {
+  padding: 0 10px;
+}
+.home main .news-home {
+  margin-bottom: 120px;
+}
+.home main .news-home .inner {
+  overflow: hidden;
+  width: 1200px;
+  margin: 0 auto;
+}
+.home main .news-home section {
+  float: left;
+  width: 570px;
+  margin-right: 60px;
+}
+.home main .news-home section:last-child {
+  margin-right: 0;
+}
+.home main .news-home h3 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: normal;
+}
+.home main .news-home dl div {
+  padding: 20px;
+  border-top: 1px solid #ccc;
+}
+.home main .news-home dl div:last-child {
+  border-bottom: 1px solid #ccc;
+}
+.home main .news-home dt {
+  float: left;
+  padding-right: 40px;
+}
+
+
+/*
+  4-2. メニュー
+======================================*/
+
+.menu main .menu-list {
+  height: 180px;
+  background-image: url( "../images/bg-red.jpg");
+  position: relative;
+}
+.menu main .menu-list .inner {
+  width: 940px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.menu main .menu-list a {
+  float: left;
+  width: 220px;
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+.menu main .menu-list a:last-child {
+  margin-right: 0;
+}
+.menu main .menu-list a:hover figcaption {
+  opacity: .6;
+}
+.menu main .menu-list figcaption {
+  margin-top: 20px;
+  color: var(--base-color);
+  text-align: center;
+  font-size: 24px;
+}
+.menu main article section {
+  padding-top: 120px;
+}
+.menu main article section div {
+  float: right;
+  width: 1000px;
+  padding-top: 40px;
+}
+.menu main article section figure {
+  float: left;
+  width: 320px;
+  margin: 0 20px 30px 0;
+}
+.menu main article section figure:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+
+/*
+  4-3. 秘伝の味
+======================================*/
+
+.secret-taste {
+}
+
+
+/*
+  4-4. 店舗案内
+======================================*/
+
+.store-guide {
+}
+
+
+/*
+  4-5. 取り組み
+======================================*/
+
+.initiatives {
+}
+
+
+/*
+  4-6. お問い合わせ
+======================================*/
+
+.contact main article section p {
+  text-align: center;
+}
+.contact main article section table {
+  width: 1000px;
+  margin-bottom: 40px;
+}
+.contact main article section th {
+  width: 200px;
+  padding: 30px;
+  background-color: #f0f7f0;
+  border: 1px solid #ccc;
+  font-weight: normal;
+  vertical-align: middle;
+}
+.contact main article section th span {
+  background-color: var(--main-color);
+  margin-left: 10px;
+  padding: 4px 6px 6px;
+  border-radius: 6px;
+  color: var(--base-color);
+}
+.contact main article section td {
+  width: 800px;
+  padding: 30px;
+  border: 1px solid #ccc;
+}
+.contact main article section table input[type="text"],
+.contact main article section table input[type="email"],
+.contact main article section table select {
+  font-family: "Noto Serif JP", serif, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+  width: 200px;
+  height: 30px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+}
+.contact main article section table input[type="email"] {
+  width: 400px;
+}
+.contact main article section table textarea {
+  font-family: "Noto Serif JP", serif, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+  width: 100%;
+  height: 200px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+}
+.contact main article section .check-area {
+  margin-bottom: 20px;
+}
+.contact main article section .check-area label {
+  display: block;
+  width: 1000px;
+  margin: 0 0 0 auto;
+  padding: 40px 0;
+  background-color: #efead7;
+  text-align: center;
+}
+.contact main article section .check-area label:hover {
+  color: var(--main-color);
+  cursor: pointer;
+}
+.contact main article section .btn-area {
+  width: 1000px;
+  margin: 0 0 30px auto;
+  padding: 40px 0;
+  background-color: #efead7;
+  text-align: center;
+}
+.contact main article section .btn-area button {
+  font-family: "Noto Serif JP", serif, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+  width: 240px;
+  padding: 20px 0;
+  background-color: #999999;
+  border: none;
+  border-radius: 6px;
+  color: var(--base-color);
+  font-size: 24px;
+}
+.contact main article section .btn-area button:hover {
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+
+
+/*
+  4-7. サイトマップ
+======================================*/
+
+.sitemap {
+}
+
+
+/*
+  4-8. プライバシーポリシー
+======================================*/
+
+.privacy-policy {
+}
+
